@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Alert, TextField } from "@mui/material";
 import jwtDecode from "jwt-decode";
-
+require("dotenv").config();
 export default function Dashboard({ token }) {
   const [loading, setLoading] = useState(true);
   const [rooms, setRooms] = useState([]);
@@ -26,7 +26,8 @@ export default function Dashboard({ token }) {
 
     axios
       .post(
-        "http://localhost:8000/room/add",
+        `${process.env.REACT_APP_BE_URL}/room/add`,
+
         { name },
         {
           headers: {
@@ -45,7 +46,7 @@ export default function Dashboard({ token }) {
   const handleRemove = (id) => {
     axios
       .post(
-        "http://localhost:8000/room/remove",
+        `${process.env.REACT_APP_BE_URL}/room/remove`,
         { id },
         {
           headers: {
@@ -70,7 +71,7 @@ export default function Dashboard({ token }) {
       setLoggedInUser(jwtDecode(token));
     }
 
-    axios.get("http://localhost:8000/room/").then((response) => {
+    axios.get(`${process.env.REACT_APP_BE_URL}/room/`).then((response) => {
       setRooms(response.data.rooms);
 
       setLoading(false);

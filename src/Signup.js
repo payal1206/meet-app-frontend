@@ -47,7 +47,7 @@ export default function Signup({ token }) {
       confirm_password: confirmPassword,
     };
     axios
-      .post("http://localhost:8000/user/signup", user)
+      .post(`${process.env.REACT_APP_BE_URL}/user/signup`, user)
       .then((response) => {
         const data = response.data;
 

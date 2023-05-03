@@ -9,6 +9,7 @@ import Home from "./Home";
 import Dashboard from "./Dashboard";
 import Room from "./Room";
 import "./style.css";
+require("dotenv").config();
 
 function App() {
   const socketRef = useRef(null);
@@ -20,7 +21,7 @@ function App() {
     const token = localStorage.getItem("token");
 
     if (token && !socketRef.current) {
-      socketRef.current = io("http://localhost:8000/", {
+      socketRef.current = io(process.env.REACT_APP_BE_URL, {
         query: {
           token: localStorage.getItem("token"),
         },

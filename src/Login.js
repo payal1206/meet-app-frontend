@@ -42,7 +42,7 @@ export default function Login({ token, setToken }) {
       password,
     };
     axios
-      .post("http://localhost:8000/user/login", user)
+      .post(`${process.env.REACT_APP_BE_URL}/user/login`, user)
       .then((response) => {
         const data = response.data;
 
