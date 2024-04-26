@@ -9,7 +9,8 @@ import Home from "./Home";
 import Dashboard from "./Dashboard";
 import Room from "./Room";
 import "./style.css";
-require("dotenv").config();
+const dotenv = require('dotenv');
+require('dotenv').config()
 
 function App() {
   const socketRef = useRef(null);

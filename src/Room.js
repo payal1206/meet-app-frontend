@@ -27,6 +27,7 @@ export default function Room(props) {
         message,
       });
     }
+    console.log("dxz",socket,message,roomId);
   };
 
   let peer = null;
@@ -114,6 +115,7 @@ export default function Room(props) {
         ];
         setMessages(newMessages);
       });
+      console.log("cvvvvvv",socket,message);
     }
     // eslint-disable-next-line
   }, [messages]);
@@ -135,10 +137,10 @@ export default function Room(props) {
         <div className="whiteboard-main">
           <canvas id="canvas"></canvas>
         </div>
-        <div className="whiteboard-settings">Whiteboard</div>
+        {/* <div className="whiteboard-settings">Whiteboard</div> */}
       </div>
 
-      <div className="participants-rating">
+      {/* <div className="participants-rating">
         <div className="participants-container">
           <Participants socket={socket} />
         </div>
@@ -146,7 +148,7 @@ export default function Room(props) {
         <div className="ratings-container">
           <Rating socket={socket} roomId={roomId} />
         </div>
-      </div>
+      </div> */}
 
       <div className="messages-container">
         <div className="messages">

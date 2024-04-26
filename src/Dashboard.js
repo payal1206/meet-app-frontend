@@ -84,12 +84,12 @@ export default function Dashboard({ token }) {
         sx={{ width: 345 }}
         style={{ margin: ".4rem", backgroundColor: "#c2d4f2" }}
       >
-        <CardMedia
+        {/* <CardMedia
           component="img"
           height="140"
           image={`https://picsum.photos/300/200`}
           alt="image"
-        />
+        /> */}
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             Join Room
@@ -119,12 +119,12 @@ export default function Dashboard({ token }) {
         sx={{ width: 345 }}
         style={{ margin: ".4rem", backgroundColor: "#c2d4f2" }}
       >
-        <CardMedia
+        {/* <CardMedia
           component="img"
           height="140"
           image={`https://picsum.photos/300/200`}
           alt="image"
-        />
+        /> */}
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             Create or Delete Room
@@ -150,12 +150,12 @@ export default function Dashboard({ token }) {
       {rooms.map((room) => {
         return (
           <Card key={room._id} sx={{ width: 345 }} style={{ margin: ".4rem" }}>
-            <CardMedia
+            {/* <CardMedia
               component="img"
               height="140"
               image={`https://picsum.photos/300/200`}
               alt="image"
-            />
+            /> */}
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
                 Name: {room.name}

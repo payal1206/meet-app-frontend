@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #navbar {
@@ -130,6 +132,8 @@ a {
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   border-radius: 8px;
+  width: 40%;
+  padding-bottom: 4%;
 }
 
 .whiteboard-container {
